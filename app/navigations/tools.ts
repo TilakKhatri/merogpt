@@ -7,48 +7,40 @@ import {
   Settings,
   VideoIcon,
 } from "lucide-react";
-
 export const tools = [
   {
-    id: "dashboard",
-    label: "Dashboard",
-    icon: LayoutDashboard,
-    path: "/dashboard",
-  },
-  {
-    id: "conversation",
     label: "Conversation",
     icon: MessageSquare,
-    path: "/conversation",
+    href: "/conversation",
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
   },
   {
-    id: "image-generation",
-    label: "Image Generation",
-    icon: ImageIcon,
-    path: "/image",
-  },
-  {
-    id: "video-generation",
-    label: "Video Generation",
-    icon: VideoIcon,
-    path: "/video",
-  },
-  {
-    id: "music-generation",
     label: "Music Generation",
     icon: Music,
-    path: "/music",
+    href: "/music",
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
   },
   {
-    id: "code-generation",
+    label: "Image Generation",
+    icon: ImageIcon,
+    color: "text-pink-700",
+    bgColor: "bg-pink-700/10",
+    href: "/image",
+  },
+  {
+    label: "Video Generation",
+    icon: VideoIcon,
+    color: "text-orange-700",
+    bgColor: "bg-orange-700/10",
+    href: "/video",
+  },
+  {
     label: "Code Generation",
     icon: Code,
-    path: "/code",
-  },
-  {
-    id: "settings",
-    label: "Settings",
-    icon: Settings,
-    path: "/settings",
+    color: "text-green-700",
+    bgColor: "bg-green-700/10",
+    href: "/code",
   },
 ];

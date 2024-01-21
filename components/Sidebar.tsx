@@ -1,11 +1,12 @@
 "use client";
 
 import { Roboto } from "next/font/google";
+import { usePathname } from "next/navigation";
 
-import { routes } from "@/app/navigations/sidebarNavigations";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+
+import { routes } from "@/app/navigations/sidebarNavigations";
 
 const roboto = Roboto({
   weight: "700",
@@ -30,14 +31,19 @@ export default function Sidebar() {
               key={route.path}
               href={route.path}
               className={cn(
-                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
+                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer rounded-lg hover:bg-violet-button hover:text-white transition",
                 pathname === route.path
-                  ? "text-black bg-white/10"
+                  ? "text-white bg-violet-button"
                   : "text-zinc-400"
               )}
             >
               <div className="flex items-center flex-1">
-                <route.icon className={cn("h-5 w-5 mr-3")} />
+                <route.icon
+                  className={cn(
+                    "h-5 w-5 mr-3 group-hover:text-white",
+                    pathname === route.path ? "text-white" : "text-violet-icon "
+                  )}
+                />
                 {route.label}
               </div>
             </Link>
