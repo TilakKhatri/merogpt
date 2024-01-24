@@ -26,7 +26,7 @@ const formSchema = z.object({
   }),
 });
 
-const ConversationPage = () => {
+const VideoPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -68,7 +68,7 @@ const ConversationPage = () => {
   return (
     <div className="px-4 lg:px-12">
       <Heading
-        title="Conversation"
+        title="Video Generator"
         description="This is our conversation model inspired from chatGpt."
       />
       <div>
@@ -96,10 +96,9 @@ const ConversationPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading}
-                      placeholder="How do I calculate the radius of a circle?"
+                      placeholder="Write function to calcute sum of n natural numbers?"
                       {...field}
                     />
-                    {/* {error && <p className="text-red-400">{"errorß"}</p>} */}
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -121,4 +120,4 @@ const ConversationPage = () => {
   );
 };
 
-export default ConversationPage;
+export default VideoPage;

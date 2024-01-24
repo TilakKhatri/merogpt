@@ -6,6 +6,7 @@ import {
   Music,
   Settings,
   VideoIcon,
+  Zap,
 } from "lucide-react";
 export const tools = [
   {
@@ -42,5 +43,12 @@ export const tools = [
     color: "text-green-700",
     bgColor: "bg-green-700/10",
     href: "/code",
+  },
+  {
+    label: "Plans",
+    icon: Zap,
+    color: "text-blue-700",
+    bgColor: "bg-blue-700/10",
+    href: "/settings",
   },
 ];
