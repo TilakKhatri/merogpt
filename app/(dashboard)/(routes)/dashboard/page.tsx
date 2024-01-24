@@ -1,20 +1,16 @@
-import { UserButton } from "@clerk/nextjs";
+"use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
-import { tools } from "@/app/navigations/tools";
+import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 
+import { Card } from "@/components/ui/card";
+
+import { cn } from "@/lib/utils";
+import { tools } from "@/app/navigations/tools";
+
 export default function DashboardPage() {
+  const router = useRouter();
+
   return (
     <div>
       <div className="mb-8 space-y-4">
@@ -33,6 +29,8 @@ export default function DashboardPage() {
         >
           {tools.map((tool) => (
             <Card
+              onClick={() => router.push(tool.href)}
+              key={tool.href}
               className={cn(
                 "w-full shadow-md hover:scale-105 transition-all cursor-pointer"
               )}
@@ -50,7 +48,7 @@ export default function DashboardPage() {
                       className={cn("w-20 h-20 md:w-24 md:h-24", tool.color)}
                     />
                   </div>
-                  <div className="font-semibold text-white tex-xl md:text-xl lg:text-2xl">
+                  <div className="font-semibold tex-xl md:text-xl lg:text-2xl">
                     {tool.label}
                   </div>
                 </div>
