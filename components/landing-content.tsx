@@ -1,33 +1,36 @@
 "use client";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Joel",
-    avatar: "J",
-    title: "Software Engineer",
+    name: "Ram B. ",
+    avatar: "Ram",
+    title: "Digital marketer",
     description: "This is the best application I've ever used!",
   },
   {
-    name: "Antonio",
-    avatar: "A",
-    title: "Designer",
-    description: "I use this daily for generating new photos!",
+    name: "Kumal yadav",
+    avatar: "Kumal",
+    title: "Content creator",
+    description:
+      "I use this daily for generating new photos! for my youtube thumbnails",
   },
   {
-    name: "Mark",
-    avatar: "M",
+    name: "Mohan kumar sah",
+    avatar: "Mohan",
     title: "CEO",
     description:
       "This app has changed my life, cannot imagine working without it!",
   },
   {
-    name: "Mary",
-    avatar: "M",
-    title: "CFO",
+    name: "Abhishek",
+    avatar: "Abhi",
+    title: "CMO",
     description:
-      "The best in class, definitely worth the premium subscription!",
+      "The best in class, definitely worth the premium subscription! It helps our content creation experts.",
   },
 ];
 
@@ -44,16 +47,23 @@ export const LandingContent = () => {
             className="bg-[#192339] border-none text-white"
           >
             <CardHeader>
-              <CardTitle className="flex items-center gap-x-2">
-                <div>
-                  <p className="text-lg">{item.name}</p>
-                  <p className="text-zinc-400 text-sm">{item.title}</p>
-                </div>
-              </CardTitle>
-              <CardContent className="pt-4 px-0">
-                {item.description}
-              </CardContent>
+              <div className="flex gap-2 items-center ">
+                <Avatar>
+                  <AvatarImage
+                    src="https://github.com/shadcn.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                <CardTitle className="flex items-center gap-x-2">
+                  <div>
+                    <p className="text-lg">{item.name}</p>
+                    <p className="text-zinc-400 text-sm">{item.title}</p>
+                  </div>
+                </CardTitle>
+              </div>
             </CardHeader>
+            <CardContent className="pt-2 px-4">{item.description}</CardContent>
           </Card>
         ))}
       </div>

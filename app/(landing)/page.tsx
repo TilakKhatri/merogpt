@@ -9,9 +9,9 @@ export default function Home() {
       <LandingNavbar />
       <LandingHero />
       <LandingContent />
-      <div className="max-w-lg mx-auto my-24">
+      {/* <div className="max-w-lg mx-auto my-24">
         <OurClients />
-      </div>
+      </div> */}
     </div>
   );
 }
