@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export const LandingHero = () => {
   const { isSignedIn } = useAuth();
-  console.log(useAuth());
+  // console.log(useAuth());
 
   return (
     <div className="text-white font-bold py-36 text-center space-y-5">
@@ -36,7 +36,7 @@ export const LandingHero = () => {
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button
-            variant="destructive"
+            variant="outline"
             className="md:text-lg p-4 md:p-6 rounded-full font-semibold"
           >
             Start Generating For Free
@@ -44,7 +44,7 @@ export const LandingHero = () => {
         </Link>
       </div>
       <div className="text-zinc-400 text-xs md:text-sm font-normal">
-        No credit card required.
+        cheap price than other
       </div>
     </div>
   );
