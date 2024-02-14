@@ -31,9 +31,9 @@ export default function Sidebar() {
               key={route.path}
               href={route.path}
               className={cn(
-                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer rounded-lg hover:bg-violet-button hover:text-white transition",
+                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer rounded-lg hover:bg-indigo-500 hover:text-white transition",
                 pathname === route.path
-                  ? "text-white bg-violet-button"
+                  ? "text-white bg-indigo-500"
                   : "text-zinc-400"
               )}
             >
@@ -41,7 +41,7 @@ export default function Sidebar() {
                 <route.icon
                   className={cn(
                     "h-5 w-5 mr-3 group-hover:text-white",
-                    pathname === route.path ? "text-white" : "text-violet-icon "
+                    pathname === route.path ? "text-white" : "text-indigo-500 "
                   )}
                 />
                 {route.label}

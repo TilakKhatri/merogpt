@@ -19,6 +19,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { Empty } from "@/components/ui/empty";
+import { Loader } from "@/components/loader";
 
 const formSchema = z.object({
   prompt: z.string().min(1, {
@@ -69,7 +71,7 @@ const VideoPage = () => {
     <div className="px-4 lg:px-12">
       <Heading
         title="Video Generator"
-        description="This is our conversation model inspired from chatGpt."
+        description="This is our video generation model inspired from chatGpt."
       />
       <div>
         <Form {...form}>
@@ -96,7 +98,7 @@ const VideoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading}
-                      placeholder="Write function to calcute sum of n natural numbers?"
+                      placeholder="Describe about how diesel engine work?"
                       {...field}
                     />
                   </FormControl>
@@ -115,6 +117,32 @@ const VideoPage = () => {
             </Button>
           </form>
         </Form>
+      </div>
+      <div className="space-y-4 mt-4">
+        {isLoading && (
+          <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
+            <Loader />
+          </div>
+        )}
+        {messages.length === 0 && !isLoading && (
+          <Empty label="No video generated." />
+        )}
+        {/* <div className="flex flex-col-reverse gap-y-4">
+            {messages.map((message) => (
+              <div 
+                key={message.content} 
+                className={cn(
+                  "p-8 w-full flex items-start gap-x-8 rounded-lg",
+                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
+                )}
+              >
+                {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
+                <p className="text-sm">
+                  {message.content}
+                </p>
+              </div>
+            ))}
+          </div> */}
       </div>
     </div>
   );
