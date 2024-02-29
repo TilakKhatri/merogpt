@@ -1,5 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Merogpt
+<img width="1440" alt="Screenshot 2024-02-29 at 11 51 43 PM" src="https://github.com/TilakKhatri/merogpt/assets/96524338/1681f652-e31b-498c-a75a-b170491a4524">
 
+A centralized system, Enhance your workflow  in cheap price.
+
+
+> I am starting this project to launch on market. Where everyone can get access to open ai power from one platform. 
+I am fail to lauch due to International payment issues.
+
+Note: Api is not working now you should replace with your api.
 ## Getting Started
 
 First, run the development server:
@@ -10,15 +18,13 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
 # or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
@@ -35,9 +41,5 @@ To learn more about openai, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
+[link](https://mero-gpt.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# ai_system
